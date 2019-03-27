@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2019/3/26
+  ~ Create at 8:4:22
+  ~ Wriitten by hanlonglin
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <Button
+       android:id="@+id/btn_goto"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="进入图片加载"/>
+
+</LinearLayout>
