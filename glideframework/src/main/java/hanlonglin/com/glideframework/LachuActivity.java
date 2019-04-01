@@ -24,7 +24,7 @@ import hanlonglin.com.glideframework.handglide.utils.LogUtil;
 
 //import com.bumptech.glide.Glide;
 
-public class LachuActivity extends Activity {
+public class LachuActivity extends AppCompatActivity {
     Button btn_load_one;
     Button btn_load_many;
     ScrollView scrollView;
@@ -84,7 +84,6 @@ public class LachuActivity extends Activity {
                 "http://pic25.nipic.com/20121205/10197997_003647426000_2.jpg",
                 "http://pic34.nipic.com/20131104/13264764_101028322111_2.jpg",
                 "http://pic34.nipic.com/20131104/13264764_101028322111_2.jpg"
-
         };
         li_scroll.removeAllViews();
         timeStart=System.currentTimeMillis();
@@ -96,20 +95,17 @@ public class LachuActivity extends Activity {
             showWithMyGlide(urlList[i],imageView);
             li_scroll.addView(imageView);
         }
-
-
     }
 
+    private void showWithMyGlide(String url,ImageView imageView){
+        Glide.with(this).placeHolder(R.drawable.ic_launcher_background).load(url).setRequestListener(requestListener).into(imageView);
+    }
 
     private void showWithGlide(String url,ImageView imageView){
        // Glide.with(this).load(url).placeholder(R.drawable.ic_launcher_background).into(imageView);
     }
 
-    private void showWithMyGlide(String url,ImageView imageView){
-        Glide.with(this).placeHolder(R.drawable.ic_launcher_background).load(url).setRequestListener(requestListener).into(imageView);
 
-       // Glide.with(this);
-    }
 
     long timeStart,timeEnd;
     mRequestListener requestListener=new mRequestListener();
@@ -121,9 +117,11 @@ public class LachuActivity extends Activity {
             LogUtil.log("加载用时："+(timeEnd-timeStart));
 
             /**
-             * 线程池方式
+             *
              * 网络加载用时4060毫秒
              * 内存加载用时5毫秒
+             *
+             *
              */
         }
 
