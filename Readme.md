@@ -6,4 +6,4 @@
 
 ## [手写发布订阅框架](eventbusframwork)
 
-## [手写动画框架](animationframework)
+## [手写动画框架](animationframwork)
