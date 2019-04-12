@@ -1,1 +1,1 @@
-include ':app', ':httpframework', ':glideframework', ':eventbusframwork'
+include ':app', ':httpframework', ':glideframework', ':eventbusframwork', ':animationframwork'
